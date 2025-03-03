@@ -103,7 +103,3 @@ function update() {
 }
 
 update()
-
-if (location != "https://embed.jns.gg/") {
-    location = location.origin
-}
