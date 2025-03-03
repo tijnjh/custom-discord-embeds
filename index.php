@@ -79,7 +79,7 @@ if (!empty($description)) {
     echo "<meta name='og:description' content='{$description}'>";
 }
 
-?><?php if (empty($redirect) && empty($url) && $_GET['format'] !== 'json') : ?>
+?><?php if (empty($redirect) && empty($url) && (!isset($_GET['format']) || $_GET['format'] !== 'json')) : ?>
 <!DOCTYPE html>
 <html lang="en">
 
