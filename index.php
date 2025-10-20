@@ -97,7 +97,6 @@ if (!empty($description)) {
 
     <!-- cdn -->
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="https://cdn.jns.gg/ntoast.js"></script>
     <link src="https://thednp.github.io/color-picker/css/color-picker.css">
 
     <?php if (empty($_GET)) : ?>
@@ -157,7 +156,7 @@ if (!empty($description)) {
                         <div class="relative grid grid-cols-1">
                             <span class="leading-5 text-red-500 truncate gg-medium">username</span>
                             <div x-data="{ open: false }" class="truncate leading-5 text-[#02A7FB]">
-                                <span @mouseover="open = true" @mouseover.outside="open = false" @click="open = false; navigator.clipboard.writeText(generatedLink.textContent); nToast('Copied link to clipboard')" id="previewLink" class="w-full cursor-pointer gg-normal hover:underline"></span>
+                                <span @mouseover="open = true" @mouseover.outside="open = false" @click="open = false; navigator.clipboard.writeText(generatedLink.textContent); alert('Copied link to clipboard')" id="previewLink" class="w-full cursor-pointer gg-normal hover:underline"></span>
                                 <div x-cloak x-show="open" x-transition class="absolute z-40 px-3 py-2 text-black bg-white rounded shadow dark:bg-zinc-800 dark:text-white">
                                     click to copy
                                 </div>
@@ -183,7 +182,7 @@ if (!empty($description)) {
                 <p class="opacity-40">result</p>
                 <div class="flex items-center gap-2">
                     <span class="block px-3 py-2 overflow-x-scroll border rounded whitespace-nowrap grow dark:border-zinc-800 border-zinc-300" id="generatedLink">https://embed.jns.gg/?</span>
-                    <button onclick="navigator.clipboard.writeText(generatedLink.textContent); nToast('Copied link to clipboard')" class="px-3 py-2 font-medium text-white bg-blue-500 rounded outline-none hover:opacity-90 focus-visible:ring active:tranzinc-y-px">copy</button>
+                    <button onclick="navigator.clipboard.writeText(generatedLink.textContent); alert('Copied link to clipboard')" class="px-3 py-2 font-medium text-white bg-blue-500 rounded outline-none hover:opacity-90 focus-visible:ring active:tranzinc-y-px">copy</button>
                 </div>
             </div>
         </section>
